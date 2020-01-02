@@ -18,15 +18,14 @@
   getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 */
   
-let user = {
-  username: '',
-  email: '',
-  
-  getUserName: function(){
-    return this.username;
+const user = {
+  username: this.username, 
+  email: this.email, 
+  getUsername: function () {
+    return this.username
   }
-
 }
+
 //Code Here
 
 
@@ -108,7 +107,7 @@ let vacation = {
 }
 
 // uncomment the line below and tell us what the context of "this" is when we invoke vacation.whatIsThis
-let context3 = whatIsThis;
+let context3 = vacation;
 
 
 class Family {
@@ -126,4 +125,4 @@ class Family {
 let family1 = new Family(2, 4, 1)
 
 // uncomment the line below and tell us what the context of "this" is for the instance of Family created above.
-let context4 = 2;
+let context4 = family1;
